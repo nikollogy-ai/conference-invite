@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Приглашение на конференцию</title>
+  <title>Прямой эфир с Аленой Никольской</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
+      font-family: Arial, sans-serif;
       background: #fff5f8;
       color: #333;
       line-height: 1.6;
@@ -27,8 +27,18 @@
     }
     section {
       max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    /* Центрированная секция с текстом */
+    .center-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 400px;
+      padding: 20px;
     }
     .btn {
       display: inline-block;
@@ -39,25 +49,40 @@
       font-size: 18px;
       border-radius: 8px;
       transition: 0.3s;
+      margin-top: 20px;
     }
     .btn:hover {
       background: #e63b6d;
     }
     .speaker {
-      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 300px;
+      margin: 50px auto;
       padding: 20px;
       border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      margin-top: 30px;
+      background: #fff;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
     }
     .speaker img {
-      width: 120px;
-      height: 120px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       object-fit: cover;
+      border: 4px solid #ff4f81;
       margin-bottom: 15px;
-      border: 3px solid #ff4f81;
+    }
+    .speaker h3 {
+      margin: 0;
+      font-size: 1.5em;
+      text-align: center;
+    }
+    .speaker p {
+      margin: 5px 0 0 0;
+      font-size: 1em;
+      color: #555;
+      text-align: center;
     }
     footer {
       text-align: center;
@@ -76,28 +101,22 @@
   <a class="btn" href="ВАША_ССЫЛКА_НА_ZOOM" target="_blank">Присоединиться</a>
 </header>
 
-<section style="display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; min-height:400px; padding:20px;">
+<section class="center-text">
   <p>Прямой эфир с Аленой Никольской</p>
   <p>Здравствуйте! Рада приветствовать Вас на моем сайте!</p>
   <p>Теперь мы можем встречаться здесь, в прямом эфире Zoom, чтобы обсудить самые важные вопросы</p>
   <p>💌 На эфире Вы сможете задать любой вопрос и получить помощь лично от меня.</p>
   <p>Присоединяйтесь к прямому эфиру прямо сейчас!</p>
-</section>
-
-  </p>
+  <a class="btn" href="ВАША_ССЫЛКА_НА_ZOOM" target="_blank">Присоединиться к конференции</a>
 </section>
 
 <section>
-  <h2>Спикер</h2>
+  <h2 style="text-align:center; margin-bottom:30px;">Спикер</h2>
   <div class="speaker">
-  <img src="images/aal.jpg" alt="Алёна Никольская">
+    <img src="images/alena.jpg" alt="Алена Никольская">
     <h3>Алена Никольская</h3>
     <p>Астролог и психолог</p>
   </div>
-</section>
-
-<section style="text-align:center; margin:50px 0;">
-  <a class="btn" href="ВАША_ССЫЛКА_НА_ZOOM" target="_blank">Присоединиться к Эфиру</a>
 </section>
 
 <footer>
@@ -106,6 +125,3 @@
 
 </body>
 </html>
-
-
-
