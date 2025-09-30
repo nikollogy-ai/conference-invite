@@ -16,7 +16,6 @@
       background: linear-gradient(135deg, #9b59b6, #e91e63);
     }
 
-    /* Слой звезд */
     body::before {
       content: "";
       position: absolute;
@@ -28,7 +27,6 @@
       pointer-events: none;
     }
 
-    /* Слой символов зодиака */
     body::after {
       content: "";
       position: absolute;
@@ -40,10 +38,15 @@
       pointer-events: none;
     }
 
-    /* Класс для желтого текста с тенью */
     .yellow-shadow {
       color: #FFD700;
       text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+
+    .white-bold {
+      color: #fff;
+      font-weight: 700;
+      text-shadow: none;
     }
 
     header, footer, .center-text, .speaker {
@@ -173,11 +176,11 @@
 </header>
 
 <section class="center-text">
-  <p>ПОГОВОРИМ</p>
-  <p>✅ На что обратить внимание каждому знаку зодиака, чтобы вернуть энергию.</p>
-  <p>✅ Как справляться с усталостью и апатией осенью.</p>
-  <p>✅ Практические шаги, чтобы снова почувствовать лёгкость жизни.</p>
-  <p>✅ Где искать внутренние ресурсы и что помогает их активировать.</p>
+  <p class="yellow-shadow">ПОГОВОРИМ</p>
+  <p class="white-bold">✅ На что обратить внимание каждому знаку зодиака, чтобы вернуть энергию.</p>
+  <p class="white-bold">✅ Как справляться с усталостью и апатией осенью.</p>
+  <p class="white-bold">✅ Практические шаги, чтобы снова почувствовать лёгкость жизни.</p>
+  <p class="white-bold">✅ Где искать внутренние ресурсы и что помогает их активировать.</p>
   <a class="btn" href="https://telemost.yandex.ru/j/91086255907841" target="_blank">Присоединиться к Эфиру</a>
 </section>
 
