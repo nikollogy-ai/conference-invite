@@ -8,14 +8,14 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: #f9f9f9;
+      background: #fff5f8;
       color: #333;
       line-height: 1.6;
     }
     header {
       text-align: center;
       padding: 50px 20px;
-      background: linear-gradient(135deg, #0066ff, #00c3ff);
+      background: linear-gradient(135deg, #ff7eb9, #ff65a3);
       color: white;
     }
     header h1 {
@@ -33,7 +33,7 @@
     .btn {
       display: inline-block;
       padding: 15px 30px;
-      background: #0066ff;
+      background: #ff4f81;
       color: #fff;
       text-decoration: none;
       font-size: 18px;
@@ -41,40 +41,37 @@
       transition: 0.3s;
     }
     .btn:hover {
-      background: #004ecc;
-    }
-    .speakers {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
+      background: #e63b6d;
     }
     .speaker {
       background: #fff;
-      padding: 15px;
-      border-radius: 10px;
+      padding: 20px;
+      border-radius: 12px;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-top: 30px;
     }
     .speaker img {
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      border: 3px solid #ff4f81;
     }
     footer {
       text-align: center;
       padding: 20px;
-      background: #eee;
+      background: #ffe0eb;
       font-size: 14px;
+      color: #555;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>АстроЭфир»</h1>
+  <h1>Онлайн-конференция «Будущее в Zoom»</h1>
   <p>📅 15 октября 2025 года • 🕒 19:00 (МСК)</p>
   <a class="btn" href="ВАША_ССЫЛКА_НА_ZOOM" target="_blank">Присоединиться</a>
 </header>
@@ -82,29 +79,17 @@
 <section>
   <h2>О событии</h2>
   <p>
-    Мы собрали ведущих экспертов, чтобы обсудить ключевые тренды ближайших лет.
+    Мы собрали ведущего эксперта, чтобы обсудить ключевые тренды ближайших лет. 
     Вас ждут новые идеи, вдохновение и возможность задать вопросы в прямом эфире.
   </p>
 </section>
 
 <section>
-  <h2>Спикеры</h2>
-  <div class="speakers">
-    <div class="speaker">
-      <img src="https://via.placeholder.com/100" alt="Фото спикера">
-      <h3>Иван Иванов</h3>
-      <p>Эксперт по цифровым технологиям</p>
-    </div>
-    <div class="speaker">
-      <img src="https://via.placeholder.com/100" alt="Фото спикера">
-      <h3>Мария Петрова</h3>
-      <p>Бизнес-тренер, автор книг</p>
-    </div>
-    <div class="speaker">
-      <img src="https://via.placeholder.com/100" alt="Фото спикера">
-      <h3>Алексей Смирнов</h3>
-      <p>Аналитик рынка</p>
-    </div>
+  <h2>Спикер</h2>
+  <div class="speaker">
+    <img src="images/alena.jpg" alt="Алена Никольская">
+    <h3>Алена Никольская</h3>
+    <p>Эксперт, психолог и автор обучающих программ</p>
   </div>
 </section>
 
@@ -118,4 +103,3 @@
 
 </body>
 </html>
-
