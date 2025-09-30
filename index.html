@@ -11,10 +11,13 @@
       background: #fff5f8;
       color: #333;
       line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
     header {
       text-align: center;
-      padding: 50px 20px;
+      padding: 30px 20px;
       background: linear-gradient(135deg, #ff7eb9, #ff65a3);
       color: white;
     }
@@ -25,19 +28,13 @@
     header p {
       font-size: 1.2em;
     }
-    section {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    /* Центрированная секция с текстом */
     .center-text {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      justify-content: center; /* вертикальное центрирование */
+      align-items: center;     /* горизонтальное центрирование */
       text-align: center;
-      min-height: 400px;
+      flex: 1; /* занимает всю доступную высоту */
       padding: 20px;
     }
     .center-text p {
