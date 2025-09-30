@@ -9,12 +9,11 @@
       margin: 0;
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      color: #FFD700; /* текст на фоне */
+      color: #fff; /* общий цвет текста */
       position: relative;
       overflow-x: hidden;
       overflow-y: auto; /* разрешаем вертикальный скролл */
       background: linear-gradient(135deg, #9b59b6, #e91e63); /* основной градиент */
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7); /* тень для всего текста */
     }
 
     /* Слой звезд */
@@ -24,7 +23,7 @@
       inset: 0;
       background: url('images/ййй-4.png') repeat center center;
       background-size: cover;
-      opacity: 0.3; /* прозрачность звезд */
+      opacity: 0.3;
       z-index: 0;
       pointer-events: none;
     }
@@ -36,13 +35,19 @@
       inset: 0;
       background: url('images/06cad0070fefe5967761a60b7f856add.jpg') repeat center center;
       background-size: auto;
-      opacity: 0.04; /* прозрачность символов зодиака */
+      opacity: 0.04;
       z-index: 0;
       pointer-events: none;
     }
 
+    /* Класс для желтого текста с тенью */
+    .yellow-shadow {
+      color: #FFD700;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+
     header, footer, .center-text, .speaker {
-      position: relative; /* чтобы быть над слоями фона */
+      position: relative;
       z-index: 1;
     }
 
@@ -55,12 +60,10 @@
     header h1 {
       margin: 0;
       font-size: 2.5em;
-      text-shadow: 3px 3px 12px rgba(0,0,0,0.8); /* дополнительная тень для заголовка */
     }
 
     header p {
       font-size: 1.2em;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
     }
 
     .center-text {
@@ -76,6 +79,8 @@
       font-size: 1.2em;
       font-weight: 600;
       margin: 10px 0;
+      color: #fff; /* обычный белый текст */
+      text-shadow: none; /* убираем тень */
     }
 
     .center-text p:first-child {
@@ -152,20 +157,20 @@
       padding: 20px;
       background: rgba(0,0,0,0.2);
       font-size: 14px;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+      color: #fff;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>«Опустошённость и осенняя хандра: как вернуть энергию»</h1>
-  <p>📅 2 октября 2025 года • 🕒 20:30 (МСК)</p>
+  <h1 class="yellow-shadow">«Опустошённость и осенняя хандра: как вернуть энергию»</h1>
+  <p class="yellow-shadow">📅 2 октября 2025 года • 🕒 20:30 (МСК)</p>
   <a class="btn" href="https://telemost.yandex.ru/j/91086255907841" target="_blank">Присоединиться</a>
 </header>
 
 <section class="center-text">
-  <p>ПОГОВОРИМ</p>
+  <p class="yellow-shadow">ПОГОВОРИМ</p>
   <p>- На что обратить внимание каждому знаку зодиака, чтобы вернуть энергию.</p>
   <p>- Как справляться с усталостью и апатией осенью.</p>
   <p>- Практические шаги, чтобы снова почувствовать лёгкость жизни.</p>
