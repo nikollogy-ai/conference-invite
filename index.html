@@ -8,21 +8,46 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      color: #FFD700; /* желтый текст на фоне космоса */
+      color: #FFD700; /* желтый текст на фоне */
       line-height: 1.6;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      background: linear-gradient(135deg, #9b59b6, #e91e63), url('images/space.jpg');
-      background-size: cover;
+
+      /* Многослойный фон: градиент + космос + зодиак */
+      background:
+        url('images/zodiac.png') repeat,         /* символы зодиака */
+        url('images/stars.png') repeat,          /* звезды */
+        linear-gradient(135deg, #9b59b6, #e91e63); /* розово-фиолетовый градиент */
+      background-size: auto, auto, cover;
       background-position: center;
-      background-repeat: no-repeat;
+      position: relative;
+      overflow: hidden;
     }
+
+    /* Анимация мерцания звёзд */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('images/stars.png') repeat;
+      opacity: 0.5;
+      animation: twinkle 6s infinite alternate;
+      pointer-events: none;
+    }
+
+    @keyframes twinkle {
+      from { opacity: 0.3; }
+      to { opacity: 0.8; }
+    }
+
     header {
       text-align: center;
       padding: 30px 20px;
       background: rgba(0,0,0,0.2);
-      color: #FFD700; /* желтый текст */
+      color: #FFD700;
+      position: relative;
+      z-index: 2;
     }
     header h1 {
       margin: 0;
@@ -39,6 +64,8 @@
       text-align: center;
       flex: 1;
       padding: 20px;
+      position: relative;
+      z-index: 2;
     }
     .center-text p {
       font-size: 1.2em;
@@ -49,7 +76,7 @@
       font-size: 1.4em;
       font-weight: 700;
     }
-    /* Кнопки на фоне космоса */
+    /* Кнопки */
     .btn {
       display: inline-block;
       padding: 15px 30px;
@@ -80,7 +107,9 @@
       background: #fff;
       box-shadow: 0 6px 18px rgba(0,0,0,0.1);
       text-align: center;
-      color: #333; /* текст в блоке не меняем */
+      color: #333;
+      position: relative;
+      z-index: 2;
     }
     .speaker img {
       width: 150px;
@@ -98,7 +127,6 @@
       margin: 5px 0 15px 0;
       font-size: 1em;
     }
-    /* Розовая кнопка внутри блока спикера */
     .speaker .btn {
       background: linear-gradient(135deg, #ff7eb9, #ff65a3);
       color: #fff;
@@ -112,7 +140,9 @@
       padding: 20px;
       background: rgba(0,0,0,0.2);
       font-size: 14px;
-      color: #FFD700; /* желтый текст на фоне космоса */
+      color: #FFD700;
+      position: relative;
+      z-index: 2;
     }
   </style>
 </head>
@@ -144,7 +174,7 @@
 </section>
 
 <footer>
-  © 2025 https://t.me/anikol_tv
+  © 2025 <a href="https://t.me/anikol_tv" style="color:#FFD700;">@anikol_tv</a>
 </footer>
 
 </body>
