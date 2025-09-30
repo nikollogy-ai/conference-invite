@@ -10,15 +10,34 @@
       font-family: Arial, sans-serif;
       line-height: 1.6;
       color: #FFD700; /* текст на фоне */
-      background:
-        url('images/06cad0070fefe5967761a60b7f856add.jpg') repeat, /* символы зодиака */
-        url('images/ййй-4.png') repeat, /* звезды */
-        linear-gradient(135deg, #9b59b6, #e91e63); /* розово-фиолетовый градиент */
-      background-size: auto, auto, cover;
-      background-position: center;
+      position: relative;
       overflow-x: hidden;
       overflow-y: auto; /* разрешаем вертикальный скролл */
-      position: relative;
+      background: linear-gradient(135deg, #9b59b6, #e91e63); /* основной градиент */
+    }
+
+    /* Слой звезд */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url('images/ййй-4.png') repeat center center;
+      background-size: cover;
+      opacity: 0.3; /* прозрачность звезд */
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Слой символов зодиака */
+    body::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url('images/06cad0070fefe5967761a60b7f856add.jpg') repeat center center;
+      background-size: auto;
+      opacity: 0.2; /* прозрачность символов зодиака */
+      z-index: 0;
+      pointer-events: none;
     }
 
     header, footer, .center-text, .speaker {
