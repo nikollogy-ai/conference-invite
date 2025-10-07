@@ -49,6 +49,14 @@
       text-shadow: none;
     }
 
+    /* 💫 Новый стиль для даты и времени */
+    .white-shadow {
+      color: #FFD700;
+      font-size: 1.6em;
+      font-weight: 700;
+      text-shadow: 0 0 12px rgba(255, 215, 0, 0.9), 0 0 25px rgba(255, 255, 255, 0.6);
+    }
+
     header, footer, .center-text, .speaker {
       position: relative;
       z-index: 1;
@@ -118,12 +126,12 @@
       transform: translateY(-2px);
     }
 
-   .speaker {
+    .speaker {
       display: flex;
       flex-direction: column;
       align-items: center;
       max-width: 300px;
-      margin: 70px auto;
+      margin: 50px auto; /* чуть выше */
       padding: 40px;
       border-radius: 12px;
       background: #fff;
@@ -209,7 +217,7 @@
 </div>
 
 <footer>
-  © 2025 https://t.me/anikol_tv
+  © 2025 <a href="https://t.me/anikol_tv" style="color:#FFD700; text-decoration:none;">@anikol_tv</a>
 </footer>
 
 </body>
