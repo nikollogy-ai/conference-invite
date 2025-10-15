@@ -49,12 +49,15 @@
       text-shadow: none;
     }
 
-    /* 💫 Новый стиль для даты и времени */
+    /* 💫 Новый розовый неоновый стиль для даты и времени */
     .white-shadow {
-      color: #FFD700;
+      color: #ff7eb9;
       font-size: 1.6em;
       font-weight: 700;
-      text-shadow: 0 0 12px rgba(255, 215, 0, 0.9), 0 0 25px rgba(255, 255, 255, 0.6);
+      text-shadow:
+        0 0 12px rgba(255, 105, 180, 0.9),
+        0 0 25px rgba(255, 105, 180, 0.7),
+        0 0 45px rgba(255, 105, 180, 0.5);
     }
 
     header, footer, .center-text, .speaker {
@@ -131,7 +134,7 @@
       flex-direction: column;
       align-items: center;
       max-width: 300px;
-      margin: 30px auto; /* чуть выше */
+      margin: 50px auto;
       padding: 40px;
       border-radius: 12px;
       background: #fff;
@@ -187,7 +190,6 @@
   </style>
 </head>
 <body>
-
   <header>
     <h1 class="yellow-shadow">
       Как справиться с депрессией и вернуть себе радость жизни.<br>
@@ -208,7 +210,6 @@
   <h2 class="yellow-shadow" style="text-align:center; margin-bottom:30px; font-size:2em;">
     Спикер
   </h2>
-
   <div class="speaker">
     <img src="images/aal.jpg" alt="Алёна Никольская">
     <h3>Алена Никольская</h3>
@@ -219,6 +220,5 @@
   <footer>
     © 2025 <a href="https://t.me/anikol_tv" style="color:#FFD700; text-decoration:none;">@anikol_tv</a>
   </footer>
-
 </body>
 </html>
