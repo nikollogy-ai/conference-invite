@@ -49,32 +49,28 @@
       text-shadow: none;
     }
 
-    /* 💫 Новый стиль для даты и времени с розово-белым градиентом и пульсацией */
+    /* 💫 Новый стиль для даты и времени с пульсацией только текста */
     .white-shadow {
       font-size: 1.6em;
       font-weight: 700;
+      display: inline-block;
+    }
+
+    .white-shadow .text {
       background: linear-gradient(90deg, #FFC0CB, #ffffff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-shadow:
-        0 0 10px rgba(255, 192, 203, 0.9),
-        0 0 20px rgba(255, 255, 255, 0.7),
-        0 0 30px rgba(255, 255, 255, 0.5);
       animation: pulse 2s infinite;
     }
 
     @keyframes pulse {
       0%, 100% {
-        text-shadow:
-          0 0 10px rgba(255, 192, 203, 0.9),
-          0 0 20px rgba(255, 255, 255, 0.7),
-          0 0 30px rgba(255, 255, 255, 0.5);
+        -webkit-text-fill-color: transparent;
+        background-position: 0% 50%;
       }
       50% {
-        text-shadow:
-          0 0 15px rgba(255, 192, 203, 1),
-          0 0 30px rgba(255, 255, 255, 0.9),
-          0 0 45px rgba(255, 255, 255, 0.7);
+        -webkit-text-fill-color: transparent;
+        background-position: 100% 50%;
       }
     }
 
@@ -213,7 +209,11 @@
       Как справиться с депрессией и вернуть себе радость жизни.<br>
       <span class="white-bold">ЧАСТЬ 2</span>
     </h1>
-    <p class="white-shadow">📅 15 октября 2025 года • 🕒 20:30 (МСК)</p>
+    <p class="white-shadow">
+      <span class="emoji">📅</span>
+      <span class="text">15 октября 2025 года • 20:30 (МСК)</span>
+      <span class="emoji">🕒</span>
+    </p>
     <a class="btn" href="https://telemost.yandex.ru/j/41245374179694" target="_blank">Присоединиться</a>
   </header>
 
