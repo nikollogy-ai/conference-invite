@@ -49,7 +49,7 @@
       text-shadow: none;
     }
 
-    /* 💫 Новый стиль для даты и времени с пульсацией только текста */
+    /* 💫 Новый стиль для даты и времени с градиентом и свечением текста */
     .white-shadow {
       font-size: 1.6em;
       font-weight: 700;
@@ -57,20 +57,28 @@
     }
 
     .white-shadow .text {
-      background: linear-gradient(90deg, #FFC0CB, #ffffff);
+      background: linear-gradient(90deg, #FFC0CB, #FF7EB9, #FFFFFF);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: pulse 2s infinite;
+      text-shadow:
+        0 0 12px rgba(255, 105, 180, 0.9),
+        0 0 25px rgba(255, 105, 180, 0.7),
+        0 0 45px rgba(255, 105, 180, 0.5);
     }
 
     @keyframes pulse {
       0%, 100% {
-        -webkit-text-fill-color: transparent;
-        background-position: 0% 50%;
+        text-shadow:
+          0 0 12px rgba(255, 105, 180, 0.9),
+          0 0 25px rgba(255, 105, 180, 0.7),
+          0 0 45px rgba(255, 105, 180, 0.5);
       }
       50% {
-        -webkit-text-fill-color: transparent;
-        background-position: 100% 50%;
+        text-shadow:
+          0 0 20px rgba(255, 105, 180, 1),
+          0 0 40px rgba(255, 105, 180, 0.8),
+          0 0 60px rgba(255, 105, 180, 0.6);
       }
     }
 
